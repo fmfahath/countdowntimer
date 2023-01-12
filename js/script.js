@@ -1,16 +1,18 @@
  function updateTime(){
-"#"  
+ 
     const days  = document.querySelector("#days");
     const hours = document.querySelector("#hours");
     const minutes = document.querySelector("#minutes");
     const seconds = document.querySelector("#seconds");
-"#"  
+
+    //current date
+     const currentDate = new Date();
     //get current year
     const currentYear = new Date().getFullYear();
     //set new year
-    const newYear = new Date(`January 1 ${currentYear+1} 00:00:00`);
+    const newYearDate = new Date(`January 1 ${currentYear+1} 00:00:00`);
     //different days count between new year & current year
-    const diff = newYear - currentYear;
+    const diff = newYearDate - currentDate;
     
     //-------------------------------------------
     // 1000ms = 1s
@@ -19,10 +21,10 @@
     // 24hrs = 1day
     //--------------------------------------------
 
-    const d = Math.floor(diff/1000/60/60/24);  //find days
-    const h = Math.floor((diff/1000/60/60)%24); //find hours
-    const m = Math.floor((diff/1000/69)%60); //find minutes
-    const s = Math.floor((diff/1000)%60); //find seconds
+    const d = Math.floor(diff/1000/60/60/24);  //get days
+    const h = Math.floor((diff/1000/60/60)%24); //get hours
+    const m = Math.floor((diff/1000/69)%60); //get minutes
+    const s = Math.floor((diff/1000)%60); //get seconds
     
     //display on screen   
     days.innerHTML = d;   
@@ -31,5 +33,7 @@
     seconds.innerHTML = s;   
 
  }
+
+//  updateTime();
 
 setInterval(updateTime, 1000);
