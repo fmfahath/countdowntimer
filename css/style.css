@@ -25,3 +25,14 @@ body{
     margin-top: 30px;
     gap: 10px;
 }
+
+p{
+    font-size: 12px;
+}
+
+.newyear{
+   font-family: 'Inspiration', cursive; 
+   font-size: 50px;
+   font-weight: 500;
+   margin-top: 20px;
+}
