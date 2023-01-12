@@ -14,3 +14,11 @@ body{
      align-items: center;
      flex-direction: column;
 }
+
+.counter{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+}
