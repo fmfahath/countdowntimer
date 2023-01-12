@@ -6,7 +6,7 @@
     const seconds = document.querySelector("#seconds");
 
     //current date
-     const currentDate = new Date();
+    const currentDate = new Date();
     //get current year
     const currentYear = new Date().getFullYear();
     //set new year
@@ -27,10 +27,10 @@
     const s = Math.floor((diff/1000)%60); //get seconds
     
     //display on screen   
-    days.innerHTML = d;   
-    hours.innerHTML = h; 
-    minutes.innerHTML = m;   
-    seconds.innerHTML = s;   
+    days.innerHTML = d<10?"0"+d:d;  //condition  (ternary operator) to display double digit 
+    hours.innerHTML = h<10?"0"+h:h  //condition  (ternary operator) to display double digit 
+    minutes.innerHTML = m<10?"0"+m:m;  //condition  (ternary operator) to display double digit  
+    seconds.innerHTML = s<10?"0"+s:s;   //condition  (ternary operator) to display double digit 
 
  }
 
